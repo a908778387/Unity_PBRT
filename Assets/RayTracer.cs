@@ -24,7 +24,6 @@ public class RayTracer : MonoBehaviour
     // Update is called once per frame
     void Update ()
     {
-        		
 	}
 
     void RayTraceJob()
@@ -34,7 +33,7 @@ public class RayTracer : MonoBehaviour
             {
                 Color color = Color.black;
                 Ray ray = GetComponent<Camera>().ScreenPointToRay(new Vector3(x, y, 0));
-                mOutput.SetPixel(x, y, TraceRay(ray, color, 0));
+                mOutput.SetPixel(x, y, TraceRay(ray, color, 1));
             }
         mOutput.Apply();    
     }
